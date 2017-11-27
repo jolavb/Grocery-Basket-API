@@ -9,3 +9,38 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'csv'
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'store_info.csv'))
+csv = CSV.parse(csv_text, headers: true, encoding: 'ISO-8859-1')
+
+csv.each do |row|
+  s = Store.new
+  s.name = row['name']
+  s.location = row['location']
+  s.lat = row['lat']
+  s.lng = row['lng']
+  s.save
+end
+
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'store_items.csv'))
+csv = CSV.parse(csv_text, headers: true, encoding: 'ISO-8859-1')
+
+csv.each do |row|
+  t = Item.new
+  t.title = row['title']
+  t.quantity = row['Quantity']
+  t.unit = row['Unit']
+  t.price = row['Price']
+  t.location = row['location']
+  t.start_date = row['start_date']
+  t.end_date = row['end_date']
+  t.image = row['image']
+  t.save
+end
+
+Item.all.each do |item|
+ store = Store.find_by location: item.location
+ item.store_id = store.id
+ item.save
+end
