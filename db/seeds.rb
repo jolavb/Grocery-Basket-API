@@ -11,10 +11,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'csv'
 
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'store_info.csv'))
-csv = CSV.parse(csv_text, headers: true, encoding: 'ISO-8859-1')
+stores_csv_text = File.read(Rails.root.join('lib', 'seeds', 'store_info.csv'))
+stores_csv = CSV.parse(stores_csv_text, headers: true, encoding: 'ISO-8859-1')
 
-csv.each do |row|
+stores_csv.each do |row|
   s = Store.new
   s.name = row['name']
   s.location = row['location']
@@ -23,10 +23,10 @@ csv.each do |row|
   s.save
 end
 
-csv_text = File.read(Rails.root.join('lib', 'seeds', 'store_items.csv'))
-csv = CSV.parse(csv_text, headers: true, encoding: 'ISO-8859-1')
+items_csv_text = File.read(Rails.root.join('lib', 'seeds', 'store_items.csv'))
+items_csv = CSV.parse(items_csv_text, headers: true, encoding: 'ISO-8859-1')
 
-csv.each do |row|
+items_csv.each do |row|
   t = Item.new
   t.title = row['title']
   t.quantity = row['Quantity']
