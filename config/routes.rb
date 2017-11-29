@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :carts
   resources :items
   resources :stores
   resources :examples, except: %i[new edit]
