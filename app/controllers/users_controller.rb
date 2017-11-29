@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 class UsersController < ProtectedController
   skip_before_action :authenticate, only: %i[signup signin]
 

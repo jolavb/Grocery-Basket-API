@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :carts
+  resources :cart_items
   resources :items
   resources :stores
   resources :examples, except: %i[new edit]
@@ -11,4 +11,5 @@ Rails.application.routes.draw do
   delete '/sign-out/:id' => 'users#signout'
   patch '/change-password/:id' => 'users#changepw'
   resources :users, only: %i[index show]
+
 end

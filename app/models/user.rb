@@ -3,6 +3,6 @@
 class User < ApplicationRecord
   include Authentication
   has_many :examples
-  has_many :carts
-  has_many :items, through: :carts
+  has_many :cart_items
+  has_many :items, through: :cart_items
 end
