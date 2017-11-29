@@ -36,7 +36,6 @@ class CartItemsController < ProtectedController
     @cart_item.destroy
     render json: current_user.items.all
   end
-
   private
 
   # Use callbacks to share common setup or constraints between actions.
