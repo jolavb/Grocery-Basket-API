@@ -36,8 +36,10 @@ items_csv.each do |row|
   t.start_date = row['start_date']
   t.end_date = row['end_date']
   t.image = row['image']
+  t.store_id = Store.first.id
   t.save
 end
+
 
 Item.all.each do |item|
  store = Store.find_by location: item.location
