@@ -1,5 +1,8 @@
+require 'prawn'
+
 class CartItemsController < ProtectedController
   before_action :set_cart_item, only: [:show, :update, :destroy]
+
 
   # GET /cart_items
   def index
@@ -47,6 +50,15 @@ class CartItemsController < ProtectedController
 
   private
 
+  # Generate PDF
+  def generate_pdf(items)
+    Prawn::Document.new do
+      items.each do |item|
+        text item.title, align: :center
+      end
+    end.render
+  end
+
   # Use callbacks to share common setup or constraints between actions.
   def set_cart_item
     @cart_item = current_user.cart_items.find_by(item_id: params[:id])
@@ -54,6 +66,7 @@ class CartItemsController < ProtectedController
 
   # Only allow a trusted parameter "white list" through.
   def cart_item_params
-    params.require(:cart_item).permit(:user_id, :item_id)
+    params.require(:cart_item).permit(:user_id, :item_id, :quantity)
   end
+
 end
