@@ -36,6 +36,15 @@ class CartItemsController < ProtectedController
     @cart_item.destroy
     render json: current_user.items.all
   end
+
+  def destroyall
+    @cart_items = current_user.cart_items.all
+    @cart_items.each do |item|
+      item.destroy
+    end
+    render json: current_user.items.all
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.

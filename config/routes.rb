@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :stores
   resources :examples, except: %i[new edit]
 
+  delete '/cart_items/' => 'cart_items#destroyall'
   post '/sign-up' => 'users#signup'
   post '/sign-in' => 'users#signin'
   delete '/sign-out/:id' => 'users#signout'
