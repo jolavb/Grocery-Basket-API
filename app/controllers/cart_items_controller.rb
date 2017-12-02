@@ -1,5 +1,5 @@
 class CartItemsController < ProtectedController
-  before_action :set_cart_item, only: [:show, :update, :destroy]
+  before_action :set_cart_item, only: [:show, :update]
 
   # GET /cart_items
   def index
@@ -31,8 +31,9 @@ class CartItemsController < ProtectedController
     end
   end
 
-  # DELETE /cart_items/1
+  # DELETE /cart_items/item id
   def destroy
+    @cart_item = current_user.cart_items.find_by(item_id: params[:id])
     @cart_item.destroy
     render json: current_user.cart_items.all
   end
