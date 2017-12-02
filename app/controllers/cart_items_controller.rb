@@ -1,12 +1,12 @@
 require 'prawn'
 
 class CartItemsController < ProtectedController
-  before_action :set_cart_item, only: [:show, :update, :destroy]
+  before_action :set_cart_item, only: [:show, :update]
 
 
   # GET /cart_items
   def index
-    @cart_items = current_user.items.all
+    @cart_items = current_user.cart_items.all
     render json: @cart_items
   end
 
@@ -17,9 +17,9 @@ class CartItemsController < ProtectedController
 
   # POST /cart_items
   def create
-    @cart_item = CartItem.new(cart_item_params)
+    @cart_item = current_user.cart_items.build(cart_item_params)
     if @cart_item.save
-      render json: current_user.items.all, status: :created, location: @cart_item
+      render json: current_user.cart_items.all, status: :created, location: @cart_item
     else
       render json: @cart_item.errors, status: :unprocessable_entity
     end
@@ -34,34 +34,23 @@ class CartItemsController < ProtectedController
     end
   end
 
-  # DELETE /cart_items/1
+  # DELETE /cart_items/item id
   def destroy
+    @cart_item = current_user.cart_items.find_by(item_id: params[:id])
     @cart_item.destroy
-    render json: current_user.items.all
+    render json: current_user.cart_items.all
   end
 
+  # DELETE all
   def destroyall
-    @cart_items = current_user.cart_items.all
-    @cart_items.each do |item|
-      item.destroy
-    end
-    render json: current_user.items.all
+    current_user.cart_items.all.each(&:destroy)
+    render json: current_user.cart_items.all
   end
 
   private
-
-  # Generate PDF
-  def generate_pdf(items)
-    Prawn::Document.new do
-      items.each do |item|
-        text item.title, align: :center
-      end
-    end.render
-  end
-
   # Use callbacks to share common setup or constraints between actions.
   def set_cart_item
-    @cart_item = current_user.cart_items.find_by(item_id: params[:id])
+    @cart_item = current_user.cart_items.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.

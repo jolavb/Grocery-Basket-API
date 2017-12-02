@@ -10,6 +10,7 @@ gem 'puma', '~> 3.0'
 gem 'rack-cors', require: 'rack/cors'
 gem 'rails', '~> 5.1.3'
 
+
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'dotenv-rails', '~> 2.2.1'
