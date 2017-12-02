@@ -1,5 +1,3 @@
-require 'prawn'
-
 class CartItemsController < ProtectedController
   before_action :set_cart_item, only: [:show, :update]
 
