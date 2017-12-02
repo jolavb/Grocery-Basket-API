@@ -1,5 +1,5 @@
 class CartItemSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :quantity
   has_one :user
   has_one :item
 end
