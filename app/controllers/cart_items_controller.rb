@@ -1,5 +1,5 @@
 class CartItemsController < ProtectedController
-  before_action :set_cart_item, only: [:show, :update]
+  before_action :set_cart_item, only: [:show]
 
 
   # GET /cart_items
@@ -25,6 +25,7 @@ class CartItemsController < ProtectedController
 
   # PATCH/PUT /cart_items/1
   def update
+    @cart_item = current_user.cart_items.find_by(item_id: params[:id])
     if @cart_item.update(cart_item_params)
       render json: @cart_item
     else
