@@ -11,6 +11,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'csv'
 
+CartItem.destroy_all
+Item.destroy_all
+Store.destroy_all
+
 stores_csv_text = File.read(Rails.root.join('lib', 'seeds', 'store_info.csv'))
 stores_csv = CSV.parse(stores_csv_text, headers: true, encoding: 'ISO-8859-1')
 
