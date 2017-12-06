@@ -15,9 +15,9 @@ Rails.application.routes.draw do
   delete '/cart_items_clear/' => 'cart_items#destroyall'
 
   # Store items
-  resources :items, except: %i[new edit]
+  resources :items, only: %i[index show]
 
   # Stores
-  resources :stores
+  resources :stores, only: %i[index show]
 
 end
