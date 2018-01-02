@@ -18,6 +18,7 @@ group :development, :test do
   gem 'pry-byebug', '~> 3.4.3'
   gem 'rspec-rails', '~> 3.6.1'
   gem 'rubocop', '~> 0.49.1'
+  gem 'unirest', '~> 1.1.2'
 end
 
 group :development do
