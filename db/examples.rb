@@ -18,3 +18,15 @@
 #                password: 'abc123',
 #                password_confirmation: nil)
 # end
+
+require 'csv'
+
+
+def load_recipes
+  Recipe.destroy_all
+  CSV.foreach('lib/seeds/Recipe.csv', headers: true) do |row|
+    Recipe.create(row.to_h)
+  end
+end
+
+load_recipes

@@ -1,5 +1,5 @@
 class StoresController < ApplicationController
-  before_action :set_store, only: [:show, :update, :destroy]
+  before_action :set_store, only: [:show, :showItems, :showRecipes, :update, :destroy]
 
   # GET /stores
   def index
@@ -10,7 +10,16 @@ class StoresController < ApplicationController
 
   # GET /stores/1
   def show
+    render json: @store
+  end
+
+  # GET /stores/1/items
+  def showItems
     render json: @store.items
+  end
+
+  def showRecipes
+    render json: @store.recipes
   end
 
   # POST /stores

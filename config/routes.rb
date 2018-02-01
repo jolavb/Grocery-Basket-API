@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  resources :recipe_items
+  resources :recipes
   resources :examples, except: %i[new edit]
 
   # Auth
@@ -19,5 +21,7 @@ Rails.application.routes.draw do
 
   # Stores
   resources :stores, only: %i[index show]
+  get '/stores/:id/items' => 'stores#showItems'
+  get '/stores/:id/recipes' => 'stores#showRecipes'
 
 end

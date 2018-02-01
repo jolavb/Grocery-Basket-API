@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180105203228) do
+ActiveRecord::Schema.define(version: 20180107191900) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,7 +46,30 @@ ActiveRecord::Schema.define(version: 20180105203228) do
     t.datetime "updated_at", null: false
     t.bigint "store_id"
     t.string "StandardTitle"
+    t.integer "usda"
     t.index ["store_id"], name: "index_items_on_store_id"
+  end
+
+  create_table "recipe_items", force: :cascade do |t|
+    t.bigint "item_id"
+    t.bigint "recipe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["item_id"], name: "index_recipe_items_on_item_id"
+    t.index ["recipe_id"], name: "index_recipe_items_on_recipe_id"
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.integer "rec_id"
+    t.string "title"
+    t.string "image"
+    t.integer "usedIngredientCount"
+    t.integer "missedIngredientCount"
+    t.integer "likes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "store_id"
+    t.index ["store_id"], name: "index_recipes_on_store_id"
   end
 
   create_table "stores", force: :cascade do |t|
@@ -72,4 +95,7 @@ ActiveRecord::Schema.define(version: 20180105203228) do
   add_foreign_key "cart_items", "users"
   add_foreign_key "examples", "users"
   add_foreign_key "items", "stores"
+  add_foreign_key "recipe_items", "items"
+  add_foreign_key "recipe_items", "recipes"
+  add_foreign_key "recipes", "stores"
 end
