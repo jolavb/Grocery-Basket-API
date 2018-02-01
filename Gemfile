@@ -9,6 +9,7 @@ gem 'pg'
 gem 'puma', '~> 3.0'
 gem 'rack-cors', require: 'rack/cors'
 gem 'rails', '~> 5.1.3'
+gem 'unirest', '~> 1.1.2'
 
 
 group :development, :test do
@@ -18,7 +19,6 @@ group :development, :test do
   gem 'pry-byebug', '~> 3.4.3'
   gem 'rspec-rails', '~> 3.6.1'
   gem 'rubocop', '~> 0.49.1'
-  gem 'unirest', '~> 1.1.2'
 end
 
 group :development do
