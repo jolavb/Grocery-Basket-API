@@ -21,8 +21,6 @@ def export_recipes
   end
 end
 
-export_recipes
-
 
 def destroy_records
   CartItem.destroy_all
@@ -69,3 +67,7 @@ def load_items
    item.save
   end
 end
+
+destroy_records
+load_stores
+load_items

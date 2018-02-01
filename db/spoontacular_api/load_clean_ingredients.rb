@@ -1,5 +1,6 @@
 require 'json'
 
+# Run to populate item StandardTitle and usda fields
 file = File.read('lib/seeds/catagorized_items.json')
 data_hash = JSON.parse(file)
 unique = {}

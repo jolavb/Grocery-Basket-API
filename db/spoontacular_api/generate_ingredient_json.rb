@@ -4,6 +4,8 @@ require 'unirest'
 require 'json'
 
 
+# Generates json file with cleaned ingredient list by feeding all ingredients to api
+
 cat_params = []
 Item.all.each do |item|
   cat_params.push(title: item.title, upc: '', plu_code: '')

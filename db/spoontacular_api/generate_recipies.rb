@@ -1,7 +1,7 @@
 require 'json'
 require 'unirest'
 
-
+# Before running script, item standatTitle field must be fillde in by load_clean ingred
 def build_search_params(items)
   ingredient_list = []
   items.each do |item|
