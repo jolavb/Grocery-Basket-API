@@ -4,6 +4,11 @@ require 'unirest'
 require 'json'
 
 
+# After importing new sale data:
+# 1. Run Generate_Ingredient_json to populate json file
+# 2. Run Load clean_ingredients to add standardized ingredient names to items
+# 3. Run generate_recieipes to populate recipes table with recipes based on StandardTitle of ingredients_list
+
 # Generates json file with cleaned ingredient list by feeding all ingredients to api
 
 cat_params = []
