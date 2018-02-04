@@ -1,21 +1,22 @@
-,lat,lng,location,name
-0,42.3898900000000000,-71.1184150000000000,49 White St.,Star Market
-1,42.3836340000000000,-71.1117960000000000,275 Beacon Street,Star Market
-2,42.3752330000000000,-71.1490320000000000,699 Mt. Auburn Street,Star Market
-3,42.3621910000000000,-71.1378400000000000,370 Western Ave,Star Market
-4,42.3619810000000000,-71.0997240000000000,20 Sidney Street,Star Market
-5,42.3614770000000000,-71.0992810000000000,14 McGrath Highway,Star Market
-6,42.3527160000000000,-71.1235720000000000,1065 Commonwealth Ave.,Star Market
-7,42.3885800000000000,-71.1911210000000000,535 Trapelo Road,Star Market
-8,42.3435430000000000,-71.1004690000000000,33 Kilmarnock Street,Star Market
-9,42.3479750000000000,-71.0790120000000000,53 Huntington Ave.,Star Market
-10,42.3376710000000000,-71.1392100000000000,1717 Beacon St.,Star Market
-11,42.3508460000000000,-71.2092220000000000,33 Austin St.,Star Market
-12,42.3237870000000000,-71.1663220000000000,1 Boylston Street,Star Market
-13,42.4122670000000000,-71.2344250000000000,1070 Lexington Street,Star Market
-14,42.3184020000000000,-71.0507120000000000,45 Morrissey Blvd,Star Market
-15,42.3469850000000000,-71.2448490000000000,2040 Commonwealth Avenue,Star Market
-16,42.2786840000000000,-71.1631350000000000,75 Spring Street,Star Market
-17,42.2707160000000000,-71.0745920000000000,4 River Street,Star Market
-18,42.2383060000000000,-71.1791730000000000,795 Providence Highway,Star Market
-19,42.2447830000000000,-71.0051830000000000,130 Granite Street,Star Market
+,Weekly,lat,lng,location,name
+0,/Circular/Star-Market-Auburndale-MA-2040-Commonwealth/D53A125751/Weekly/2/,42.3469850000000000,-71.2448490000000000,2040 Commonwealth Avenue,Star Market
+1,/Circular/Star-Market-Belmont-MA-535-Trapelo-Rd-/1007125758/Weekly/2/,42.3885800000000000,-71.1911210000000000,535 Trapelo Road,Star Market
+2,/Circular/Star-Market-Boston-MA-1065-Commonwealth-Ave/C442125761/Weekly/2/,42.3527160000000000,-71.1235720000000000,1065 Commonwealth Ave.,Star Market
+3,/Circular/Star-Market-Boston-MA-33-Kilmarnock-St/D980125756/Weekly/2/,42.3435430000000000,-71.1004690000000000,33 Kilmarnock Street,Star Market
+4,/Circular/Star-Market-Boston-MA-53-Huntington-Ave-/686F125767/Weekly/2/,42.3479750000000000,-71.0790120000000000,53 Huntington Ave.,Star Market
+5,/Circular/Star-Market-Brighton-MA-370-Western-Ave-/6EAE125753/Weekly/2/,42.3621910000000000,-71.1378400000000000,370 Western Ave,Star Market
+6,/Circular/Star-Market-Brookline-MA-1717-Beacon-St-/DCDF125750/Weekly/2/,42.3376710000000000,-71.1392100000000000,1717 Beacon St.,Star Market
+7,/Circular/Star-Market-Cambridge-MA-20-Sidney-St-/39BB125762/Weekly/2/,42.3619810000000000,-71.0997240000000000,20 Sidney Street,Star Market
+8,/Circular/Star-Market-Cambridge-MA-49-White-St-/1B8F125748/Weekly/2/,42.3898900000000000,-71.1184150000000000,49 White St.,Star Market
+9,/Circular/Star-Market-Cambridge-MA-699-Mt-Auburn-St-/EA02125749/Weekly/2/,42.3752330000000000,-71.1490320000000000,699 Mt. Auburn Street,Star Market
+10,/Circular/Star-Market-Chestnut-Hill-MA-1-Boylston-St-/54B4125770/Weekly/2/,42.3237870000000000,-71.1663220000000000,1 Boylston Street,Star Market
+11,/Circular/Star-Market-Dedham-MA-795-Providence-Highway/1D9C125744/Weekly/2/,42.2383060000000000,-71.1791730000000000,795 Providence Highway,Star Market
+12,/Circular/Star-Market-Dorchester-MA-45-Morrissey-Blvd-/2201125760/Weekly/2/,42.3184020000000000,-71.0507120000000000,45 Morrissey Blvd,Star Market
+13,/Circular/Star-Market-Lower-Mills-4-River-St-/7619125769/Weekly/2/,42.2707160000000000,-71.0745920000000000,4 River Street,Star Market
+14,/Circular/Star-Market-Marshfield-MA-1-Snow-Road/E5F8125763/Weekly/2/,42.0895180000000000,-70.7073960000000000,1 Snow Road,Star Market
+15,/Circular/Star-Market-Newtonville-MA-33-Austin-St-/4C35125747/Weekly/2/,42.3508460000000000,-71.2092220000000000,33 Austin St.,Star Market
+16,/Circular/Star-Market-Quincy-MA-130-Granite-St-/7BEF125754/Weekly/2/,42.2447830000000000,-71.0051830000000000,130 Granite Street,Star Market
+17,/Circular/Star-Market-Somerville-MA-14-McGrath-Hwy/29B0125757/Weekly/2/,42.3614770000000000,-71.0992810000000000,14 McGrath Highway,Star Market
+18,/Circular/Star-Market-Somerville-MA-275-Beacon-St-/814A125755/Weekly/2/,42.3836340000000000,-71.1117960000000000,275 Beacon Street,Star Market
+19,/Circular/Star-Market-Waltham-MA-1070-Lexington-St-/354C125752/Weekly/2/,42.4122670000000000,-71.2344250000000000,1070 Lexington Street,Star Market
+20,/Circular/Star-Market-West-Roxbury-MA-75-Spring-St-/3773127578/Weekly/2/,42.2786840000000000,-71.1631350000000000,75 Spring Street,Star Market

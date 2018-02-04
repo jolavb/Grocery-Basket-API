@@ -9,6 +9,16 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# To Refresh Data:
+#
+# 1. include new store_info and store_items
+# 2. run db:seed
+# 3. Generate_Ingredient_json
+# 4. load_clean_ingreds
+# 5. generate_recieipes
+
+
 require 'csv'
 
 
@@ -23,6 +33,7 @@ end
 
 
 def destroy_records
+  Recipe.destroy_all
   CartItem.destroy_all
   Item.destroy_all
   Store.destroy_all
